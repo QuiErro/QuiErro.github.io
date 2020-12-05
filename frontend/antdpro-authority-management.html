@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>ant design pro 权限管理 | QuiErro&#39;s blog</title>
+    <meta name="description" content="">
+    <meta name="generator" content="VuePress 1.3.0">
+    
+    
+    <link rel="preload" href="/assets/css/0.styles.93dcc6b2.css" as="style"><link rel="preload" href="/assets/js/app.2619889f.js" as="script"><link rel="preload" href="/assets/js/2.96a76ef5.js" as="script"><link rel="preload" href="/assets/js/6.be928897.js" as="script"><link rel="prefetch" href="/assets/js/10.5bda610d.js"><link rel="prefetch" href="/assets/js/11.aaafe754.js"><link rel="prefetch" href="/assets/js/12.c8c4a9dc.js"><link rel="prefetch" href="/assets/js/13.bb83ed70.js"><link rel="prefetch" href="/assets/js/14.7d6fc175.js"><link rel="prefetch" href="/assets/js/15.8ff5a488.js"><link rel="prefetch" href="/assets/js/16.f4417e8a.js"><link rel="prefetch" href="/assets/js/17.23a97fb3.js"><link rel="prefetch" href="/assets/js/18.8a0fa7a6.js"><link rel="prefetch" href="/assets/js/19.1ae67b9a.js"><link rel="prefetch" href="/assets/js/3.def7da81.js"><link rel="prefetch" href="/assets/js/4.ad57049c.js"><link rel="prefetch" href="/assets/js/5.50374dc2.js"><link rel="prefetch" href="/assets/js/7.eb8c7482.js"><link rel="prefetch" href="/assets/js/8.a0ec3913.js"><link rel="prefetch" href="/assets/js/9.ffa921f0.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.93dcc6b2.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">QuiErro's blog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/frontend/summary-antdpro.html" class="nav-link">
+  Frontend
+</a></div><div class="nav-item"><a href="/frontend/frontend-algorithm.html" class="nav-link">
+  前端算法
+</a></div><div class="nav-item"><a href="/laravel/laradock.html" class="nav-link">
+  Laravel
+</a></div> <a href="https://github.com/QuiErro/QuiErro.github.io" target="_blank" rel="noopener noreferrer" class="repo-link">
+    My GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/frontend/summary-antdpro.html" class="nav-link">
+  Frontend
+</a></div><div class="nav-item"><a href="/frontend/frontend-algorithm.html" class="nav-link">
+  前端算法
+</a></div><div class="nav-item"><a href="/laravel/laradock.html" class="nav-link">
+  Laravel
+</a></div> <a href="https://github.com/QuiErro/QuiErro.github.io" target="_blank" rel="noopener noreferrer" class="repo-link">
+    My GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>前端</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/frontend/summary-antdpro.html" class="sidebar-link">antd pro 使用小结</a></li><li><a href="/frontend/antdpro-authority-management.html" class="active sidebar-link">antd pro 权限管理</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/frontend/antdpro-authority-management.html#前言" class="sidebar-link">前言</a></li><li class="sidebar-sub-header"><a href="/frontend/antdpro-authority-management.html#权限管理" class="sidebar-link">权限管理</a></li></ul></li><li><a href="/frontend/frontend-algorithm.html" class="sidebar-link">前端算法</a></li><li><a href="/frontend/webpack-setting.html" class="sidebar-link">Webpack基本配置</a></li><li><a href="/frontend/learning-nuxt.html" class="sidebar-link">Nuxt.js学习笔记</a></li><li><a href="/frontend/learning-next.html" class="sidebar-link">Next.js学习笔记</a></li><li><a href="/frontend/webpack-react.html" class="sidebar-link">使用webpack搭建React项目开发环境</a></li><li><a href="/frontend/dva-shopping-cart.html" class="sidebar-link">初探dva——购物车实战</a></li><li><a href="/frontend/source-code.html" class="sidebar-link">试着实现JS源码</a></li><li><a href="/frontend/prototype.html" class="sidebar-link">谈谈JS中的继承与原型链</a></li><li><a href="/frontend/colorful-balls.html" class="sidebar-link">炫彩小球：基于Canvas和ES6中的Class类知识点的练习</a></li><li><a href="/frontend/web-shop.html" class="sidebar-link">用Vue+Node搭建网上购物商城</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="ant-design-pro-权限管理"><a href="#ant-design-pro-权限管理" class="header-anchor">#</a> ant design pro 权限管理</h1> <h2 id="前言"><a href="#前言" class="header-anchor">#</a> 前言</h2> <p>这段时间一直用ant design pro这个框架开发项目，其中最重要的模块之一应该就是其自带的权限控制功能，现在也来谈谈我对这个模块代码的理解。随着框架的升级，代码部分可能有所改动，但其实现思路和方法应是没有大的变动。</p> <h2 id="权限管理"><a href="#权限管理" class="header-anchor">#</a> 权限管理</h2> <h3 id="config-config-js"><a href="#config-config-js" class="header-anchor">#</a> config/config.js</h3> <p>首先可以看到只需在config文件中进行路由配置，即能访问对应路由页面</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  <span class="token operator">...</span>
+  routes<span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+      path<span class="token operator">:</span> <span class="token string">'/user'</span><span class="token punctuation">,</span>
+      component<span class="token operator">:</span> <span class="token string">'../layouts/UserLayout'</span><span class="token punctuation">,</span>
+      routes<span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+          name<span class="token operator">:</span> <span class="token string">'login'</span><span class="token punctuation">,</span>
+          path<span class="token operator">:</span> <span class="token string">'/user/login'</span><span class="token punctuation">,</span>
+          component<span class="token operator">:</span> <span class="token string">'./user/login'</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token operator">...</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>为了统一管理路由配置，我一般单独封装<code>router.config.js</code>文件，通过es6的<code>export import</code>最终配置到config.js文件</p> <h3 id="router-config"><a href="#router-config" class="header-anchor">#</a> router.config</h3> <p>接着看看<a href="https://pro.ant.design/docs/authority-management-cn" target="_blank" rel="noopener noreferrer">官网<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>上的应用实例</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token punctuation">{</span>
+  path<span class="token operator">:</span> <span class="token string">'/'</span><span class="token punctuation">,</span>
+  component<span class="token operator">:</span> <span class="token string">'../layouts/BasicLayout'</span><span class="token punctuation">,</span>
+  Routes<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'src/pages/Authorized'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  authority<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'admin'</span><span class="token punctuation">,</span> <span class="token string">'user'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  routes<span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token comment">// forms</span>
+    <span class="token punctuation">{</span>
+      path<span class="token operator">:</span> <span class="token string">'/form'</span><span class="token punctuation">,</span>
+      icon<span class="token operator">:</span> <span class="token string">'form'</span><span class="token punctuation">,</span>
+      name<span class="token operator">:</span> <span class="token string">'form'</span><span class="token punctuation">,</span>
+      routes<span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+          path<span class="token operator">:</span> <span class="token string">'/form/basic-form'</span><span class="token punctuation">,</span>
+          name<span class="token operator">:</span> <span class="token string">'basicform'</span><span class="token punctuation">,</span>
+          component<span class="token operator">:</span> <span class="token string">'./Forms/BasicForm'</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+          path<span class="token operator">:</span> <span class="token string">'/form/advanced-form'</span><span class="token punctuation">,</span>
+          name<span class="token operator">:</span> <span class="token string">'advancedform'</span><span class="token punctuation">,</span>
+          authority<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'admin'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token comment">//配置准入权限,可以配置多个角色</span>
+          component<span class="token operator">:</span> <span class="token string">'./Forms/AdvancedForm'</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>可以明白只需在路由配置中设置<code>Routes</code>属性，pro 的路由系统中会默认包裹<code>Authorized</code>进行判断处理，而<code>authority</code>属性则代表准入权限组合</p> <h3 id="authorize-组件"><a href="#authorize-组件" class="header-anchor">#</a> Authorize 组件</h3> <p>来到<code>src/pages/Authorize.jsx</code>文件，可以看到它导出的组件包裹了<code>Authorized</code>组件</p> <div class="language-jsx extra-class"><pre class="language-jsx"><code><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> children <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Authorized</span></span>
+    <span class="token attr-name">authority</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>children<span class="token punctuation">.</span>props<span class="token punctuation">.</span>route<span class="token punctuation">.</span>authority<span class="token punctuation">}</span></span>
+    <span class="token attr-name">noMatch</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Redirect</span></span> <span class="token attr-name">to</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>/user/login<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span><span class="token punctuation">}</span></span>
+  <span class="token punctuation">&gt;</span></span><span class="token plain-text">
+    </span><span class="token punctuation">{</span>children<span class="token punctuation">}</span><span class="token plain-text">
+  </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">Authorized</span></span><span class="token punctuation">&gt;</span></span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p><code>authority</code>属性传入的时该路由页面准入的权限组合，<code>noMatch</code>属性则是传入当用户无访问权限时显示的页面组件。进一步你可以根据用户是否已登录，来控制是跳转到登录页或是一个403错误页面</p> <div class="language-jsx extra-class"><pre class="language-jsx"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Authorized</span></span>
+   <span class="token attr-name">authority</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token function">getRouteAuthority</span><span class="token punctuation">(</span>location<span class="token operator">!</span><span class="token punctuation">.</span>pathname<span class="token punctuation">,</span> routes<span class="token punctuation">)</span><span class="token operator">!</span><span class="token punctuation">}</span></span>
+   <span class="token attr-name">noMatch</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>isLogin <span class="token operator">?</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Redirect</span></span> <span class="token attr-name">to</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>/exception/403<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span> <span class="token operator">:</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Redirect</span></span> <span class="token attr-name">to</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>/user/login<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span><span class="token punctuation">}</span></span>
+<span class="token punctuation">&gt;</span></span><span class="token plain-text">
+   </span><span class="token punctuation">{</span>children<span class="token punctuation">}</span><span class="token plain-text">
+</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">Authorized</span></span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><p>往上可以看到<code>Authorized</code>组件的由来</p> <div class="language-jsx extra-class"><pre class="language-jsx"><code><span class="token keyword">import</span> RenderAuthorized <span class="token keyword">from</span> <span class="token string">'@/components/Authorized'</span><span class="token punctuation">;</span> <span class="token comment">// eslint-disable-line</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> getAuthority <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@/utils/authority'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> Authority <span class="token operator">=</span> <span class="token function">getAuthority</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> Authorized <span class="token operator">=</span> <span class="token function">RenderAuthorized</span><span class="token punctuation">(</span>Authority<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>其中<code>getAuthority</code>方法理论上返回当前用户具有的所有权限，可以依照实际需求在<code>src/utils/authority.js</code>文件中对方法改写<br>
+所以<code>Authorized</code>是<code>RenderAuthorized</code>方法执行后得到的组件，同时方法参数是<code>Authority</code>，即用户所有权限</p> <h3 id="renderauthorized"><a href="#renderauthorized" class="header-anchor">#</a> RenderAuthorized</h3> <p>来到<code>src/components/Authorized/index.jsx</code></p> <div class="language-jsx extra-class"><pre class="language-jsx"><code><span class="token keyword">import</span> Authorized <span class="token keyword">from</span> <span class="token string">'./Authorized'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> AuthorizedRoute <span class="token keyword">from</span> <span class="token string">'./AuthorizedRoute'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> Secured <span class="token keyword">from</span> <span class="token string">'./Secured'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> check <span class="token keyword">from</span> <span class="token string">'./CheckPermissions'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> renderAuthorize <span class="token keyword">from</span> <span class="token string">'./renderAuthorize'</span><span class="token punctuation">;</span>
+
+Authorized<span class="token punctuation">.</span>Secured <span class="token operator">=</span> Secured<span class="token punctuation">;</span>
+Authorized<span class="token punctuation">.</span>AuthorizedRoute <span class="token operator">=</span> AuthorizedRoute<span class="token punctuation">;</span>
+Authorized<span class="token punctuation">.</span>check <span class="token operator">=</span> check<span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token function">renderAuthorize</span><span class="token punctuation">(</span>Authorized<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>可以看到它导出的是<code>renderAuthorize(Authorized)</code>执行后的结果，这个结果理论上也是一个方法，它接收的参数是当前用户所有的权限组合，即<code>getAuthority()</code>得到的数据，最后返回一个组件</p> <h3 id="renderauthorize"><a href="#renderauthorize" class="header-anchor">#</a> renderAuthorize</h3> <p>接着先看<code>renderAuthoriz</code>方法</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token operator">...</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token parameter">Authorized</span> <span class="token operator">=&gt;</span> <span class="token function">renderAuthorize</span><span class="token punctuation">(</span>Authorized<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>可以看到它导出的是一个方法，所以在<code>index.jsx</code>文件的<code>renderAuthorize(Authorized)</code>返回的最终是<code>renderAuthorize(Authorized)</code>执行得到的结果，往上看</p> <div class="language-jsx extra-class"><pre class="language-jsx"><code><span class="token keyword">const</span> <span class="token function-variable function">renderAuthorize</span> <span class="token operator">=</span> <span class="token parameter">Authorized</span> <span class="token operator">=&gt;</span> <span class="token parameter">currentAuthority</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>currentAuthority<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">typeof</span> currentAuthority <span class="token operator">===</span> <span class="token string">'function'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token constant">CURRENT</span> <span class="token operator">=</span> <span class="token function">currentAuthority</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>
+      <span class="token class-name">Object</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span>currentAuthority<span class="token punctuation">)</span> <span class="token operator">===</span> <span class="token string">'[object String]'</span> <span class="token operator">||</span>
+      Array<span class="token punctuation">.</span><span class="token function">isArray</span><span class="token punctuation">(</span>currentAuthority<span class="token punctuation">)</span>
+    <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token constant">CURRENT</span> <span class="token operator">=</span> currentAuthority<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+    <span class="token constant">CURRENT</span> <span class="token operator">=</span> <span class="token string">'NULL'</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">return</span> Authorized<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><p>可以看到<code>renderAuthorize(Authorized)</code>执行得到的是一个组件，它接收<code>currentAuthority</code>属性，并且渲染的是外层接收的Authorized参数<br>
+由此可以推断这个<code>Authorized</code>参数实际上是一个组件，往上追溯，这个反复提到的<code>Authorized</code>组件是由<code>src\components\Authorized\Authorized.jsx</code>导出</p> <h3 id="authorized-jsx"><a href="#authorized-jsx" class="header-anchor">#</a> Authorized.jsx</h3> <p>继续看<code>src\components\Authorized\Authorized.jsx</code></p> <div class="language-jsx extra-class"><pre class="language-jsx"><code><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> Result <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'antd'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> check <span class="token keyword">from</span> <span class="token string">'./CheckPermissions'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> Authorized <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">{</span>
+  children<span class="token punctuation">,</span>
+  authority<span class="token punctuation">,</span>
+  noMatch <span class="token operator">=</span> <span class="token punctuation">(</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Result</span></span>
+      <span class="token attr-name">status</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>403<span class="token punctuation">&quot;</span></span>
+      <span class="token attr-name">title</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>403<span class="token punctuation">&quot;</span></span>
+      <span class="token attr-name">subTitle</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>Sorry, you are not authorized to access this page.<span class="token punctuation">&quot;</span></span>
+    <span class="token punctuation">/&gt;</span></span>
+  <span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> childrenRender <span class="token operator">=</span> <span class="token keyword">typeof</span> children <span class="token operator">===</span> <span class="token string">'undefined'</span> <span class="token operator">?</span> <span class="token keyword">null</span> <span class="token operator">:</span> children<span class="token punctuation">;</span>
+  <span class="token keyword">const</span> dom <span class="token operator">=</span> <span class="token function">check</span><span class="token punctuation">(</span>authority<span class="token punctuation">,</span> childrenRender<span class="token punctuation">,</span> noMatch<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span></span><span class="token punctuation">&gt;</span></span><span class="token punctuation">{</span>dom<span class="token punctuation">}</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span></span><span class="token punctuation">&gt;</span></span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> Authorized<span class="token punctuation">;</span>
+</code></pre></div><p>实际上核心代码是<code>check</code>方法，它返回dom组件，也就是实际的页面组件</p> <h3 id="checkpermissions"><a href="#checkpermissions" class="header-anchor">#</a> CheckPermissions</h3> <p>继续看<code>src\components\Authorized\CheckPermissions.jsx</code>，它的核心代码应该是<code>checkPermissions</code>方法，其中它接收的参数在代码文件也已详细说明</p> <div class="language-jsx extra-class"><pre class="language-jsx"><code><span class="token comment">/**
+ * 通用权限检查方法
+ * Common check permissions method
+ * @param { 权限判定 | Permission judgment } authority
+ * @param { 你的权限 | Your permission description } currentAuthority
+ * @param { 通过的组件 | Passing components } target
+ * @param { 未通过的组件 | no pass components } Exception
+ */</span>
+<span class="token keyword">const</span> <span class="token function-variable function">checkPermissions</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">authority<span class="token punctuation">,</span> currentAuthority<span class="token punctuation">,</span> target<span class="token punctuation">,</span> Exception</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token comment">// 没有判定权限.默认查看所有</span>
+  <span class="token comment">// Retirement authority, return target;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>authority<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> target<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span> <span class="token comment">// 数组处理</span>
+
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>Array<span class="token punctuation">.</span><span class="token function">isArray</span><span class="token punctuation">(</span>authority<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>Array<span class="token punctuation">.</span><span class="token function">isArray</span><span class="token punctuation">(</span>currentAuthority<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>currentAuthority<span class="token punctuation">.</span><span class="token function">some</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">item</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> authority<span class="token punctuation">.</span><span class="token function">includes</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> target<span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>authority<span class="token punctuation">.</span><span class="token function">includes</span><span class="token punctuation">(</span>currentAuthority<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> target<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">return</span> Exception<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span> <span class="token comment">// string 处理</span>
+
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">typeof</span> authority <span class="token operator">===</span> <span class="token string">'string'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>Array<span class="token punctuation">.</span><span class="token function">isArray</span><span class="token punctuation">(</span>currentAuthority<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>currentAuthority<span class="token punctuation">.</span><span class="token function">some</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">item</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> authority <span class="token operator">===</span> item<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> target<span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>authority <span class="token operator">===</span> currentAuthority<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> target<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">return</span> Exception<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span> <span class="token comment">// Promise 处理</span>
+
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>authority <span class="token keyword">instanceof</span> <span class="token class-name">Promise</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">PromiseRender</span></span> <span class="token attr-name">ok</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>target<span class="token punctuation">}</span></span> <span class="token attr-name">error</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>Exception<span class="token punctuation">}</span></span> <span class="token attr-name">promise</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>authority<span class="token punctuation">}</span></span> <span class="token punctuation">/&gt;</span></span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span> <span class="token comment">// Function 处理</span>
+
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">typeof</span> authority <span class="token operator">===</span> <span class="token string">'function'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> bool <span class="token operator">=</span> <span class="token function">authority</span><span class="token punctuation">(</span>currentAuthority<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 函数执行后返回值是 Promise</span>
+
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>bool <span class="token keyword">instanceof</span> <span class="token class-name">Promise</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">PromiseRender</span></span> <span class="token attr-name">ok</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>target<span class="token punctuation">}</span></span> <span class="token attr-name">error</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>Exception<span class="token punctuation">}</span></span> <span class="token attr-name">promise</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>bool<span class="token punctuation">}</span></span> <span class="token punctuation">/&gt;</span></span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>bool<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> target<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">return</span> Exception<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">Error</span><span class="token punctuation">(</span><span class="token string">'unsupported parameters'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><p>这段代码实际上也很好理解，总结来说ant design pro的权限管理模块核心代码就是这个<code>checkPermissions</code>方法，它的作用就是检查路由页面的准入权限和用户所具有的权限是否匹配。如果用户具有访问权限，即返回<code>target</code>参数，即实际的页面组件，否则返回未通过的组件</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/frontend/summary-antdpro.html" class="prev">
+        antd pro 使用小结
+      </a></span> <span class="next"><a href="/frontend/frontend-algorithm.html">
+        前端算法
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.2619889f.js" defer></script><script src="/assets/js/2.96a76ef5.js" defer></script><script src="/assets/js/6.be928897.js" defer></script>
+  </body>
+</html>

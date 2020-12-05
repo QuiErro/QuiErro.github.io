@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Ant Design Pro 使用小结 | QuiErro&#39;s blog</title>
+    <meta name="description" content="">
+    <meta name="generator" content="VuePress 1.3.0">
+    
+    
+    <link rel="preload" href="/assets/css/0.styles.93dcc6b2.css" as="style"><link rel="preload" href="/assets/js/app.2619889f.js" as="script"><link rel="preload" href="/assets/js/2.96a76ef5.js" as="script"><link rel="preload" href="/assets/js/14.7d6fc175.js" as="script"><link rel="prefetch" href="/assets/js/10.5bda610d.js"><link rel="prefetch" href="/assets/js/11.aaafe754.js"><link rel="prefetch" href="/assets/js/12.c8c4a9dc.js"><link rel="prefetch" href="/assets/js/13.bb83ed70.js"><link rel="prefetch" href="/assets/js/15.8ff5a488.js"><link rel="prefetch" href="/assets/js/16.f4417e8a.js"><link rel="prefetch" href="/assets/js/17.23a97fb3.js"><link rel="prefetch" href="/assets/js/18.8a0fa7a6.js"><link rel="prefetch" href="/assets/js/19.1ae67b9a.js"><link rel="prefetch" href="/assets/js/3.def7da81.js"><link rel="prefetch" href="/assets/js/4.ad57049c.js"><link rel="prefetch" href="/assets/js/5.50374dc2.js"><link rel="prefetch" href="/assets/js/6.be928897.js"><link rel="prefetch" href="/assets/js/7.eb8c7482.js"><link rel="prefetch" href="/assets/js/8.a0ec3913.js"><link rel="prefetch" href="/assets/js/9.ffa921f0.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.93dcc6b2.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">QuiErro's blog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/frontend/summary-antdpro.html" class="nav-link router-link-exact-active router-link-active">
+  Frontend
+</a></div><div class="nav-item"><a href="/frontend/frontend-algorithm.html" class="nav-link">
+  前端算法
+</a></div><div class="nav-item"><a href="/laravel/laradock.html" class="nav-link">
+  Laravel
+</a></div> <a href="https://github.com/QuiErro/QuiErro.github.io" target="_blank" rel="noopener noreferrer" class="repo-link">
+    My GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/frontend/summary-antdpro.html" class="nav-link router-link-exact-active router-link-active">
+  Frontend
+</a></div><div class="nav-item"><a href="/frontend/frontend-algorithm.html" class="nav-link">
+  前端算法
+</a></div><div class="nav-item"><a href="/laravel/laradock.html" class="nav-link">
+  Laravel
+</a></div> <a href="https://github.com/QuiErro/QuiErro.github.io" target="_blank" rel="noopener noreferrer" class="repo-link">
+    My GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>前端</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/frontend/summary-antdpro.html" class="active sidebar-link">antd pro 使用小结</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/frontend/summary-antdpro.html#一、eslint规范" class="sidebar-link">一、Eslint规范</a></li><li class="sidebar-sub-header"><a href="/frontend/summary-antdpro.html#二、layout模板去掉页脚antd链接" class="sidebar-link">二、layout模板去掉页脚antd链接</a></li><li class="sidebar-sub-header"><a href="/frontend/summary-antdpro.html#三、在请求头中添加acess-token" class="sidebar-link">三、在请求头中添加acess_token</a></li><li class="sidebar-sub-header"><a href="/frontend/summary-antdpro.html#四、用户角色" class="sidebar-link">四、用户角色</a></li><li class="sidebar-sub-header"><a href="/frontend/summary-antdpro.html#五、错误边界" class="sidebar-link">五、错误边界</a></li><li class="sidebar-sub-header"><a href="/frontend/summary-antdpro.html#六、修改全局样式" class="sidebar-link">六、修改全局样式</a></li><li class="sidebar-sub-header"><a href="/frontend/summary-antdpro.html#七、集成sentry" class="sidebar-link">七、集成sentry</a></li><li class="sidebar-sub-header"><a href="/frontend/summary-antdpro.html#八、集成富文本编辑器" class="sidebar-link">八、集成富文本编辑器</a></li><li class="sidebar-sub-header"><a href="/frontend/summary-antdpro.html#九、监听路由变化" class="sidebar-link">九、监听路由变化</a></li><li class="sidebar-sub-header"><a href="/frontend/summary-antdpro.html#十、通过临时token访问项目" class="sidebar-link">十、通过临时token访问项目</a></li><li class="sidebar-sub-header"><a href="/frontend/summary-antdpro.html#十一、自定义菜单栏渲染" class="sidebar-link">十一、自定义菜单栏渲染</a></li><li class="sidebar-sub-header"><a href="/frontend/summary-antdpro.html#十二、用户权限" class="sidebar-link">十二、用户权限</a></li><li class="sidebar-sub-header"><a href="/frontend/summary-antdpro.html#十三、dva-loading" class="sidebar-link">十三、dva-loading</a></li><li class="sidebar-sub-header"><a href="/frontend/summary-antdpro.html#十四、条件渲染" class="sidebar-link">十四、条件渲染</a></li></ul></li><li><a href="/frontend/antdpro-authority-management.html" class="sidebar-link">antd pro 权限管理</a></li><li><a href="/frontend/frontend-algorithm.html" class="sidebar-link">前端算法</a></li><li><a href="/frontend/webpack-setting.html" class="sidebar-link">Webpack基本配置</a></li><li><a href="/frontend/learning-nuxt.html" class="sidebar-link">Nuxt.js学习笔记</a></li><li><a href="/frontend/learning-next.html" class="sidebar-link">Next.js学习笔记</a></li><li><a href="/frontend/webpack-react.html" class="sidebar-link">使用webpack搭建React项目开发环境</a></li><li><a href="/frontend/dva-shopping-cart.html" class="sidebar-link">初探dva——购物车实战</a></li><li><a href="/frontend/source-code.html" class="sidebar-link">试着实现JS源码</a></li><li><a href="/frontend/prototype.html" class="sidebar-link">谈谈JS中的继承与原型链</a></li><li><a href="/frontend/colorful-balls.html" class="sidebar-link">炫彩小球：基于Canvas和ES6中的Class类知识点的练习</a></li><li><a href="/frontend/web-shop.html" class="sidebar-link">用Vue+Node搭建网上购物商城</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="ant-design-pro-使用小结"><a href="#ant-design-pro-使用小结" class="header-anchor">#</a> Ant Design Pro 使用小结</h1> <h2 id="一、eslint规范"><a href="#一、eslint规范" class="header-anchor">#</a> 一、Eslint规范</h2> <h3 id="引入jsx文件时省略-jsx-后缀"><a href="#引入jsx文件时省略-jsx-后缀" class="header-anchor">#</a> 引入jsx文件时省略 .jsx 后缀</h3> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// .eslintrc.js</span>
+ rules<span class="token operator">:</span> <span class="token punctuation">{</span>
+  <span class="token comment">//  'react/jsx-filename-extension': [1, { extensions: ['.js'] }],</span>
+    <span class="token string">'react/jsx-filename-extension'</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> extensions<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'.js'</span><span class="token punctuation">,</span> <span class="token string">'.jsx'</span><span class="token punctuation">]</span> <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token operator">...</span>
+ <span class="token punctuation">}</span>
+</code></pre></div><h3 id="支持路径别名"><a href="#支持路径别名" class="header-anchor">#</a> 支持路径别名</h3> <div class="language-javascript extra-class"><pre class="language-javascript"><code>yarn add eslint<span class="token operator">-</span><span class="token keyword">import</span><span class="token operator">-</span>resolver<span class="token operator">-</span>webpack eslint<span class="token operator">-</span><span class="token keyword">import</span><span class="token operator">-</span>resolver<span class="token operator">-</span>alias
+</code></pre></div><div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// .eslintrc.js</span>
+settings<span class="token operator">:</span> <span class="token punctuation">{</span>
+   <span class="token string">'import/resolver'</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+     alias<span class="token operator">:</span> <span class="token punctuation">{</span>
+       map<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token string">'@'</span><span class="token punctuation">,</span> path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span><span class="token string">'src'</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+     <span class="token punctuation">}</span><span class="token punctuation">,</span>
+   <span class="token punctuation">}</span><span class="token punctuation">,</span>
+ <span class="token punctuation">}</span><span class="token punctuation">,</span>
+</code></pre></div><div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// config/config.js</span>
+<span class="token keyword">import</span> path <span class="token keyword">from</span> <span class="token string">'path'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+<span class="token operator">...</span>
+ alias<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token string">'@'</span><span class="token operator">:</span> path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span><span class="token string">'../src'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="在代码文件中以注释定义eslint"><a href="#在代码文件中以注释定义eslint" class="header-anchor">#</a> 在代码文件中以注释定义eslint</h3> <ul><li>临时在一段代码中取消<code>eslint</code>检查<div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">/* eslint-disable */</span>
+
+<span class="token comment">// Disables all rules between comments </span>
+<span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">'123'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">/* eslint-enable */</span>
+</code></pre></div></li> <li>临时在一段代码中取消个别规则的检查 (如<code>no-alert, no-console</code>)<div class="language- extra-class"><pre class="language-text"><code>/* eslint-disable no-alert, no-console */
+
+// Disables no-alert and no-console warnings between comments 
+alert(‘123’); 
+console.log(‘123’);
+
+/* eslint-enable no-alert, no-console */
+</code></pre></div></li> <li>在整个文件中取消<code>eslint</code>检查<div class="language- extra-class"><pre class="language-text"><code>/* eslint-disable */
+
+// Disables all rules for the rest of the file 
+alert('123');
+</code></pre></div></li> <li>在整个文件中禁用某一项<code>eslint</code>规则的检查<div class="language- extra-class"><pre class="language-text"><code>/* eslint-disable no-alert */
+
+// Disables no-alert for the rest of the file 
+alert('123');
+</code></pre></div></li> <li>针对某一行禁用<code>eslint</code>检查<div class="language- extra-class"><pre class="language-text"><code>alert('foo'); // eslint-disable-line
+
+// eslint-disable-next-line 
+alert('123');
+</code></pre></div></li> <li>针对某一行的某一具体规则禁用<code>eslint</code>检查<div class="language- extra-class"><pre class="language-text"><code>alert('123'); // eslint-disable-line no-alert
+
+// eslint-disable-next-line no-alert 
+alert('123');
+</code></pre></div></li></ul> <h2 id="二、layout模板去掉页脚antd链接"><a href="#二、layout模板去掉页脚antd链接" class="header-anchor">#</a> 二、layout模板去掉页脚antd链接</h2> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// src/layouts/BasicLayout.jsx</span>
+<span class="token keyword">const</span> defaultFooterDom <span class="token operator">=</span> <span class="token operator">&lt;</span>DefaultFooter copyright<span class="token operator">=</span><span class="token string">&quot;xx系统出品&quot;</span> links<span class="token operator">=</span><span class="token string">&quot;&quot;</span> <span class="token operator">/</span><span class="token operator">&gt;</span><span class="token punctuation">;</span>
+<span class="token operator">...</span>
+<span class="token keyword">return</span> <span class="token punctuation">(</span>
+   <span class="token operator">&lt;</span><span class="token operator">&gt;</span>
+     <span class="token punctuation">{</span>defaultFooterDom<span class="token punctuation">}</span>
+      <span class="token operator">&lt;</span>div style<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span> padding<span class="token operator">:</span> <span class="token string">'0px 24px 24px'</span><span class="token punctuation">,</span> textAlign<span class="token operator">:</span> <span class="token string">'center'</span> <span class="token punctuation">}</span><span class="token punctuation">}</span> <span class="token operator">/</span><span class="token operator">&gt;</span>
+   <span class="token operator">&lt;</span><span class="token operator">/</span><span class="token operator">&gt;</span>
+ <span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h2 id="三、在请求头中添加acess-token"><a href="#三、在请求头中添加acess-token" class="header-anchor">#</a> 三、在请求头中添加acess_token</h2> <p>通常在项目开发中需要判断用户是否已成功登录并拥有访问权限，这时我们不会只依赖于后端的session。因为每个用户登录后，如果都需要服务器存储该用户的登录状态，这样也会影响服务端性能，所以我们通常选择在客户端（浏览器）存储token，在发送请求时，在请求头中添加<code>token</code>，后端就能依据token判断用户权限</p> <p>因为antd pro已为开发者封装了<code>src/utils/request.js</code>文件，我们只需要使用里面的<code>request</code>方法，但是如果每次请求都要手动添加access_token，也太麻烦了，所以我们可以利用<code>request.interceptors.request.use(url, options)</code>方法统一处理</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> extend <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'umi-request'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> getToken <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./authority'</span><span class="token punctuation">;</span>
+
+<span class="token comment">/**
+ * 配置request请求时的默认参数
+ */</span>
+<span class="token keyword">const</span> request <span class="token operator">=</span> <span class="token function">extend</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token comment">// 默认错误处理</span>
+  errorHandler<span class="token punctuation">,</span>
+  credentials<span class="token operator">:</span> <span class="token string">'include'</span><span class="token punctuation">,</span> <span class="token comment">// 默认请求是否带上cookie</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">/**
+ * 配置request拦截器, 改变url 或 options.
+ */</span>
+request<span class="token punctuation">.</span>interceptors<span class="token punctuation">.</span>request<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span><span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token parameter">url<span class="token punctuation">,</span> options</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> token <span class="token operator">=</span> <span class="token function">getToken</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// 获取存储在浏览器的token</span>
+  <span class="token keyword">const</span> defaultHeaders <span class="token operator">=</span> <span class="token punctuation">{</span>
+    Accept<span class="token operator">:</span> <span class="token string">'application/json'</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>token <span class="token operator">&amp;&amp;</span> token<span class="token punctuation">.</span>access_token<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+   <span class="token comment">// 根据前后端约定的api在请求头里添加token</span>
+    defaultHeaders<span class="token punctuation">.</span>Authorization <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">Bearer </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>token<span class="token punctuation">.</span>access_token<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span> 
+  <span class="token punctuation">}</span>
+  <span class="token keyword">const</span> newOptions <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token operator">...</span>options<span class="token punctuation">,</span> headers<span class="token operator">:</span> defaultHeaders <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>
+    newOptions<span class="token punctuation">.</span>method <span class="token operator">===</span> <span class="token string">'POST'</span> <span class="token operator">||</span>
+    newOptions<span class="token punctuation">.</span>method <span class="token operator">===</span> <span class="token string">'PUT'</span> <span class="token operator">||</span>
+    newOptions<span class="token punctuation">.</span>method <span class="token operator">===</span> <span class="token string">'DELETE'</span>
+  <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token punctuation">(</span>newOptions<span class="token punctuation">.</span>body <span class="token keyword">instanceof</span> <span class="token class-name">FormData</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      newOptions<span class="token punctuation">.</span>headers <span class="token operator">=</span> <span class="token punctuation">{</span>
+        <span class="token string">'Content-Type'</span><span class="token operator">:</span> <span class="token string">'application/json; charset=utf-8'</span><span class="token punctuation">,</span>
+        <span class="token operator">...</span>newOptions<span class="token punctuation">.</span>headers<span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">;</span>
+      newOptions<span class="token punctuation">.</span>body <span class="token operator">=</span> <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span>newOptions<span class="token punctuation">.</span>body<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+      <span class="token comment">// newOptions.body is FormData</span>
+      newOptions<span class="token punctuation">.</span>headers <span class="token operator">=</span> <span class="token punctuation">{</span>
+        <span class="token operator">...</span>newOptions<span class="token punctuation">.</span>headers<span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> <span class="token punctuation">{</span>
+    url<span class="token punctuation">,</span>
+    options<span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token operator">...</span>newOptions <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> request<span class="token punctuation">;</span>
+</code></pre></div><h2 id="四、用户角色"><a href="#四、用户角色" class="header-anchor">#</a> 四、用户角色</h2> <p>有时我们需要设置不同用户角色，用来判断该用户所拥有的权限能操作或访问哪些功能和页面，antd pro已经为我们预设了这一功能，我们只需要在此基础上进一步完善</p> <ul><li>首先我们需要知道，antd pro在渲染页面时，是利用<code>src/utils/authority.js</code>里的<code>getAuthority</code>方法来获取当前用户的角色，以此来判断该用户的权限，所以我们应该在该方法里返回真正的用户角色</li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// src/utils/authority.js</span>
+<span class="token comment">// 这里只给出大致的实现思路</span>
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">getAuthorityByToken</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> str <span class="token operator">=</span> localStorage<span class="token punctuation">.</span><span class="token function">getItem</span><span class="token punctuation">(</span><span class="token string">'api-token'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// 用token判断用户是否登录</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>str<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">[</span><span class="token string">'guest'</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">const</span> expires <span class="token operator">=</span> localStorage<span class="token punctuation">.</span><span class="token function">getItem</span><span class="token punctuation">(</span><span class="token string">'api-token-expires'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">moment</span><span class="token punctuation">(</span>expires<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">isBefore</span><span class="token punctuation">(</span><span class="token function">moment</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>  <span class="token comment">// 判断是否登录超时</span>
+    <span class="token function">setUser</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token punctuation">[</span><span class="token string">'guest'</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">const</span> user <span class="token operator">=</span> <span class="token function">getUser</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// getUser方法将返回当前用户信息，需要自己完善</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>user <span class="token operator">||</span> <span class="token operator">!</span>user<span class="token punctuation">.</span>roles<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">[</span><span class="token string">'guest'</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> user<span class="token punctuation">.</span>roles<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">getAuthority</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token function">getAuthorityByToken</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><ul><li>然后我们需要将路由权限应用起来</li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// config/config.js</span>
+<span class="token comment">// 推荐把路由配置封装到单独的文件中，利用export和import在config.js中配置</span>
+<span class="token keyword">import</span> pageRoutes <span class="token keyword">from</span> <span class="token string">'./router.config'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  <span class="token operator">...</span>
+  routes<span class="token operator">:</span> pageRoutes<span class="token punctuation">,</span>
+  <span class="token operator">...</span>
+<span class="token punctuation">}</span>
+</code></pre></div><div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// config/router.config.js</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">[</span>
+  <span class="token punctuation">{</span>
+    path<span class="token operator">:</span> <span class="token string">'/user'</span><span class="token punctuation">,</span>
+    component<span class="token operator">:</span> <span class="token string">'../layouts/UserLayout'</span><span class="token punctuation">,</span>
+    routes<span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">{</span>
+        name<span class="token operator">:</span> <span class="token string">'login'</span><span class="token punctuation">,</span>
+        path<span class="token operator">:</span> <span class="token string">'/user/login'</span><span class="token punctuation">,</span>
+        component<span class="token operator">:</span> <span class="token string">'./User/Login'</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span>
+    path<span class="token operator">:</span> <span class="token string">'/'</span><span class="token punctuation">,</span>
+    component<span class="token operator">:</span> <span class="token string">'../layouts/BasicLayout'</span><span class="token punctuation">,</span>
+    <span class="token comment">// 这里的Routes属性，利用Authorized组件判断用户角色，具体说明请见官方文档</span>
+    Routes<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'src/pages/Authorized'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>  
+    <span class="token comment">// authority属性的值，可以是一个数组，包括了该路由下可访问的角色</span>
+    authority<span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token string">'guest'</span><span class="token punctuation">,</span>
+      <span class="token string">'admin'</span><span class="token punctuation">,</span>
+      <span class="token string">'manager'</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    routes<span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">{</span>
+        path<span class="token operator">:</span> <span class="token string">'/'</span><span class="token punctuation">,</span>
+        redirect<span class="token operator">:</span> <span class="token string">'/dashboard'</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>
+        path<span class="token operator">:</span> <span class="token string">'/dashboard'</span><span class="token punctuation">,</span>
+        name<span class="token operator">:</span> <span class="token string">'Dashboard'</span><span class="token punctuation">,</span>
+        icon<span class="token operator">:</span> <span class="token string">'smile'</span><span class="token punctuation">,</span>
+        component<span class="token operator">:</span> <span class="token string">'./DashBoard'</span><span class="token punctuation">,</span>
+        authority<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'admin'</span><span class="token punctuation">,</span> <span class="token string">'manager'</span><span class="token punctuation">,</span> <span class="token string">'guest'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>
+        path<span class="token operator">:</span> <span class="token string">'/overview'</span><span class="token punctuation">,</span>
+        name<span class="token operator">:</span> <span class="token string">'Overview'</span><span class="token punctuation">,</span>
+        icon<span class="token operator">:</span> <span class="token string">'container'</span><span class="token punctuation">,</span>
+        component<span class="token operator">:</span> <span class="token string">'./Overview'</span><span class="token punctuation">,</span>
+        authority<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'admin'</span><span class="token punctuation">,</span> <span class="token string">'manager'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span>
+      <span class="token punctuation">{</span>
+        component<span class="token operator">:</span> <span class="token string">'./404'</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">]</span><span class="token punctuation">;</span>
+</code></pre></div><ul><li>到此，我们可以尝试登陆不同角色的用户账号，会发现，admin和manager用户在左侧的菜单里将出现dashboard和overview的选项，即可以访问到这两个页面，而guest用户左侧只显示dashboard，overview页面是访问不了的。如果我们在浏览器地址栏里手动输入<code>/overview</code>，页面将会出现403页面，提示我们没有权限访问</li> <li>然而这还没有结束，当我们按照老方式创建一个二级路由</li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token punctuation">{</span>
+    path<span class="token operator">:</span> <span class="token string">'/overview'</span><span class="token punctuation">,</span>
+    name<span class="token operator">:</span> <span class="token string">'Overview'</span><span class="token punctuation">,</span>
+    icon<span class="token operator">:</span> <span class="token string">'container'</span><span class="token punctuation">,</span>
+    authority<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'admin'</span><span class="token punctuation">,</span> <span class="token string">'manager'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    routes<span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+            path<span class="token operator">:</span> <span class="token string">'/overview/one'</span><span class="token punctuation">,</span>
+            name<span class="token operator">:</span> <span class="token string">'One'</span><span class="token punctuation">,</span>
+            icon<span class="token operator">:</span> <span class="token string">'container'</span><span class="token punctuation">,</span>
+            component<span class="token operator">:</span> <span class="token string">'./OverView/One'</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+            path<span class="token operator">:</span> <span class="token string">'/overview/Two'</span><span class="token punctuation">,</span>
+            name<span class="token operator">:</span> <span class="token string">'Two'</span><span class="token punctuation">,</span>
+            icon<span class="token operator">:</span> <span class="token string">'container'</span><span class="token punctuation">,</span>
+            component<span class="token operator">:</span> <span class="token string">'./OverView/Two'</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+</code></pre></div><p>然后我们登陆guest角色，在地址栏手动输入<code>/overview/one</code>，会发现页面还是正常渲染了，并没有阻止用户访问。这是因为我们虽然给<code>/overview</code>路由设置了<code>authority</code>，却没有给子路由设置，所以所有角色都能访问。我们需要对此进行修改</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token punctuation">{</span>
+    path<span class="token operator">:</span> <span class="token string">'/overview'</span><span class="token punctuation">,</span>
+    name<span class="token operator">:</span> <span class="token string">'Overview'</span><span class="token punctuation">,</span>
+    icon<span class="token operator">:</span> <span class="token string">'container'</span><span class="token punctuation">,</span>
+    <span class="token comment">// 这里还需要Routes属性，针对二级路由，我们需要进一步判断权限</span>
+    Routes<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'src/pages/Subscriped'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>  
+    authority<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'admin'</span><span class="token punctuation">,</span> <span class="token string">'manager'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    routes<span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+            path<span class="token operator">:</span> <span class="token string">'/overview/one'</span><span class="token punctuation">,</span>
+            name<span class="token operator">:</span> <span class="token string">'One'</span><span class="token punctuation">,</span>
+            icon<span class="token operator">:</span> <span class="token string">'container'</span><span class="token punctuation">,</span>
+            <span class="token comment">// 设置Routes后，这里的authority才会生效</span>
+            authority<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'admin'</span><span class="token punctuation">,</span> <span class="token string">'manager'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> 
+            component<span class="token operator">:</span> <span class="token string">'./OverView/One'</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+            path<span class="token operator">:</span> <span class="token string">'/overview/Two'</span><span class="token punctuation">,</span>
+            name<span class="token operator">:</span> <span class="token string">'Two'</span><span class="token punctuation">,</span>
+            icon<span class="token operator">:</span> <span class="token string">'container'</span><span class="token punctuation">,</span>
+            authority<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'admin'</span><span class="token punctuation">,</span> <span class="token string">'manager'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+            component<span class="token operator">:</span> <span class="token string">'./OverView/Two'</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+</code></pre></div><p>可以看到在上面设置Routes属性时，我利用了<code>Subscriped</code>组件进行判断，而不是原先的<code>Authorized</code>组件，主要区别是：Authorized组件用来判断用户是否有权限访问项目实际页面，如果没有会直接跳回登录页，提示用户重新登录，这种适用于在项目根路由处进行配置，因为我们通常首先访问根路由<code>/</code>，而不是某一具体页面<br>
+所以针对二级路由，我们可以增设一个新的判断权限的组件，当我们故意想看那些没有权限访问的页面时，页面应该显示的是403页面，提示用户没有相关权限。比如：当guest用户访问<code>/overview</code>时，页面应该显示“您没有访问权限”这样的页面，而不是直接跳回登录页</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// src/pages/Subscriped.jsx</span>
+<span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> Result <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'antd'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> RenderAuthorized <span class="token keyword">from</span> <span class="token string">'@/components/Authorized'</span><span class="token punctuation">;</span> 
+<span class="token keyword">import</span> <span class="token punctuation">{</span> getAuthority <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@/utils/authority'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> children <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> authority <span class="token operator">=</span> <span class="token function">getAuthority</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">const</span> Authorized <span class="token operator">=</span> <span class="token function">RenderAuthorized</span><span class="token punctuation">(</span>authority<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token operator">&lt;</span>Authorized
+      authority<span class="token operator">=</span><span class="token punctuation">{</span>children<span class="token punctuation">.</span>props<span class="token punctuation">.</span>route<span class="token punctuation">.</span>authority<span class="token punctuation">}</span>
+      noMatch<span class="token operator">=</span><span class="token punctuation">{</span>
+        <span class="token operator">&lt;</span>Result
+          status<span class="token operator">=</span><span class="token string">&quot;403&quot;</span>
+          title<span class="token operator">=</span><span class="token string">&quot;403&quot;</span>
+          subTitle<span class="token operator">=</span><span class="token string">&quot;Sorry, you are not authorized to access this page.&quot;</span>
+        <span class="token operator">/</span><span class="token operator">&gt;</span>
+      <span class="token punctuation">}</span>
+    <span class="token operator">&gt;</span>
+      <span class="token punctuation">{</span>children<span class="token punctuation">}</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>Authorized<span class="token operator">&gt;</span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><h2 id="五、错误边界"><a href="#五、错误边界" class="header-anchor">#</a> 五、错误边界</h2> <p>在使用antd pro开发中，有时会遇到本地环境明明运行得好好地，然而一到生产环境，有时就会出现页面渲染出错，直接导致页面白屏。对于这种摸不着的抽风BUG，改起来真是心有余而力不足。为此，我们可以换种思路去优化它，主要就是使用React16引入的<code>错误边界 (Error Boundaries)</code></p> <p><a href="https://react.docschina.org/docs/error-boundaries.html" target="_blank" rel="noopener noreferrer">官方介绍<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <blockquote><p>部分 UI 的 JavaScript 错误不应该导致整个应用崩溃<br>
+错误边界是一种 React 组件，这种组件可以捕获并打印发生在其子组件树任何位置的 JavaScript 错误，并且，它会渲染出备用 UI，而不是渲染那些崩溃了的子组件树。</p></blockquote> <p>核心介绍如上，总而言之，就是当子组件渲染出错时，我们可以利用<code>static getDerivedStateFromError()</code>或者<code>componentDidCatch()</code>去渲染备用UI或者打印错误</p> <p>由此，我们可以在<code>BasicLayout</code>组件中使用<code>错误边界</code>,从而优化项目，但是错误边界的用法只适用于<code>class组件</code>，为此，需要在<code>BasicLayout</code>组件中先进行修改</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// src/layouts/BasicLayout.jsx</span>
+<span class="token keyword">class</span> <span class="token class-name">BasicLayout</span> <span class="token keyword">extends</span> <span class="token class-name">React<span class="token punctuation">.</span>Component</span> <span class="token punctuation">{</span>
+  <span class="token function">componentDidMount</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> <span class="token punctuation">{</span> dispatch <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>dispatch<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token function">dispatch</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+        type<span class="token operator">:</span> <span class="token string">'user/fetchCurrent'</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+  
+   <span class="token function-variable function">handleMenuCollapse</span> <span class="token operator">=</span> <span class="token parameter">payload</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> <span class="token punctuation">{</span> dispatch <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>dispatch<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token function">dispatch</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+        type<span class="token operator">:</span> <span class="token string">'global/changeLayoutCollapsed'</span><span class="token punctuation">,</span>
+        payload<span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>  
+
+<span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> <span class="token punctuation">{</span>
+      children<span class="token punctuation">,</span>
+      settings<span class="token punctuation">,</span>
+      location <span class="token operator">=</span> <span class="token punctuation">{</span>
+        pathname<span class="token operator">:</span> <span class="token string">'/'</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      route<span class="token operator">:</span> <span class="token punctuation">{</span> routes <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">;</span>
+    <span class="token keyword">const</span> <span class="token punctuation">{</span> props <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">const</span> authorized <span class="token operator">=</span> <span class="token function">getAuthorityFromRouter</span><span class="token punctuation">(</span>routes<span class="token punctuation">,</span> location<span class="token punctuation">.</span>pathname <span class="token operator">||</span> <span class="token string">'/'</span><span class="token punctuation">)</span> <span class="token operator">||</span> <span class="token punctuation">{</span>
+      authority<span class="token operator">:</span> <span class="token keyword">undefined</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+      <span class="token operator">&lt;</span>ProLayout
+        menuHeaderRender<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span>
+          <span class="token operator">&lt;</span>Link to<span class="token operator">=</span><span class="token string">&quot;/&quot;</span><span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span>h1<span class="token operator">&gt;</span>Ant Design<span class="token operator">&lt;</span><span class="token operator">/</span>h1<span class="token operator">&gt;</span>
+          <span class="token operator">&lt;</span><span class="token operator">/</span>Link<span class="token operator">&gt;</span>
+        <span class="token punctuation">)</span><span class="token punctuation">}</span>
+        onCollapse<span class="token operator">=</span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>handleMenuCollapse<span class="token punctuation">}</span>
+        menuItemRender<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token parameter">menuItemProps<span class="token punctuation">,</span> defaultDom</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+          <span class="token keyword">if</span> <span class="token punctuation">(</span>menuItemProps<span class="token punctuation">.</span>isUrl <span class="token operator">||</span> menuItemProps<span class="token punctuation">.</span>children <span class="token operator">||</span> <span class="token operator">!</span>menuItemProps<span class="token punctuation">.</span>path<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> defaultDom<span class="token punctuation">;</span>
+          <span class="token punctuation">}</span>
+          <span class="token keyword">return</span> <span class="token operator">&lt;</span>Link to<span class="token operator">=</span><span class="token punctuation">{</span>menuItemProps<span class="token punctuation">.</span>path<span class="token punctuation">}</span><span class="token operator">&gt;</span><span class="token punctuation">{</span>defaultDom<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>Link<span class="token operator">&gt;</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">}</span>
+        breadcrumbRender<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token parameter">routers <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span></span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span>
+          <span class="token punctuation">{</span>
+            path<span class="token operator">:</span> <span class="token string">'/'</span><span class="token punctuation">,</span>
+            breadcrumbName<span class="token operator">:</span> <span class="token function">formatMessage</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+              id<span class="token operator">:</span> <span class="token string">'menu.home'</span><span class="token punctuation">,</span>
+              defaultMessage<span class="token operator">:</span> <span class="token string">'Home'</span><span class="token punctuation">,</span>
+            <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          <span class="token operator">...</span>routers<span class="token punctuation">,</span>
+        <span class="token punctuation">]</span><span class="token punctuation">}</span>
+        itemRender<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token parameter">routeRender<span class="token punctuation">,</span> params<span class="token punctuation">,</span> routesRender<span class="token punctuation">,</span> paths</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+          <span class="token keyword">const</span> first <span class="token operator">=</span> routesRender<span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span>routeRender<span class="token punctuation">)</span> <span class="token operator">===</span> <span class="token number">0</span><span class="token punctuation">;</span>
+          <span class="token keyword">return</span> first <span class="token operator">?</span> <span class="token punctuation">(</span>
+            <span class="token operator">&lt;</span>Link to<span class="token operator">=</span><span class="token punctuation">{</span>paths<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token string">'/'</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token operator">&gt;</span><span class="token punctuation">{</span>routeRender<span class="token punctuation">.</span>breadcrumbName<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>Link<span class="token operator">&gt;</span>
+          <span class="token punctuation">)</span> <span class="token operator">:</span> <span class="token punctuation">(</span>
+            <span class="token operator">&lt;</span>span<span class="token operator">&gt;</span><span class="token punctuation">{</span>routeRender<span class="token punctuation">.</span>breadcrumbName<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>span<span class="token operator">&gt;</span>
+          <span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">}</span>
+        footerRender<span class="token operator">=</span><span class="token punctuation">{</span>footerRender<span class="token punctuation">}</span>
+        menuDataRender<span class="token operator">=</span><span class="token punctuation">{</span>menuDataRender<span class="token punctuation">}</span>
+        formatMessage<span class="token operator">=</span><span class="token punctuation">{</span>formatMessage<span class="token punctuation">}</span>
+        rightContentRender<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token operator">&lt;</span>RightContent <span class="token operator">/</span><span class="token operator">&gt;</span><span class="token punctuation">}</span>
+        <span class="token punctuation">{</span><span class="token operator">...</span>props<span class="token punctuation">}</span>
+        <span class="token punctuation">{</span><span class="token operator">...</span>settings<span class="token punctuation">}</span>
+      <span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>Authorized authority<span class="token operator">=</span><span class="token punctuation">{</span>authorized<span class="token punctuation">.</span>authority<span class="token punctuation">}</span> noMatch<span class="token operator">=</span><span class="token punctuation">{</span>noMatch<span class="token punctuation">}</span><span class="token operator">&gt;</span>
+          <span class="token punctuation">{</span> children <span class="token punctuation">}</span>
+        <span class="token operator">&lt;</span><span class="token operator">/</span>Authorized<span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>ProLayout<span class="token operator">&gt;</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token function">connect</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> global<span class="token punctuation">,</span> settings <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span><span class="token punctuation">{</span>
+  collapsed<span class="token operator">:</span> global<span class="token punctuation">.</span>collapsed<span class="token punctuation">,</span>
+  settings<span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">(</span>BasicLayout<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>接着在此基础上，引入错误边界</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">class</span> <span class="token class-name">BasicLayout</span> <span class="token keyword">extends</span> <span class="token class-name">React<span class="token punctuation">.</span>Component</span> <span class="token punctuation">{</span>
+  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token parameter">props</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">super</span><span class="token punctuation">(</span>props<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>state <span class="token operator">=</span> <span class="token punctuation">{</span>
+      hasError<span class="token operator">:</span> <span class="token boolean">false</span>  <span class="token comment">// 初始时，无任何错误</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token comment">// 关键语句：当子组件出错时，更新state</span>
+  <span class="token keyword">static</span> <span class="token function">getDerivedStateFromError</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span> hasError<span class="token operator">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  
+  <span class="token function">render</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> <span class="token punctuation">{</span> hasError <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span><span class="token operator">&lt;</span><span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>ProLayout <span class="token operator">&gt;</span>
+          <span class="token operator">&lt;</span>Authorized authority<span class="token operator">=</span><span class="token punctuation">{</span>authorized<span class="token punctuation">.</span>authority<span class="token punctuation">}</span> noMatch<span class="token operator">=</span><span class="token punctuation">{</span>noMatch<span class="token punctuation">}</span><span class="token operator">&gt;</span>
+             <span class="token punctuation">{</span><span class="token comment">/* 根据hasError，当出错时，渲染错误提示组件（备用UI） */</span><span class="token punctuation">}</span>
+             <span class="token punctuation">{</span>hasError <span class="token operator">?</span> <span class="token operator">&lt;</span>Result status<span class="token operator">=</span><span class="token string">&quot;error&quot;</span> title<span class="token operator">=</span><span class="token string">&quot;页面出错了！&quot;</span> <span class="token operator">/</span><span class="token operator">&gt;</span> <span class="token operator">:</span> children<span class="token punctuation">}</span>
+          <span class="token operator">&lt;</span><span class="token operator">/</span>Authorized<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span><span class="token operator">/</span>ProLayout<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span><span class="token operator">&gt;</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>由此，当页面出错时，会去渲染备用UI，进行用户提示，并且此时左侧的菜单栏还能正常使用。这就保证了<strong>如果其中的某些 UI 组件崩溃，其余部分仍然能够交互</strong>。但是，要<strong>注意错误边界仅可以捕获其子组件的错误，它无法捕获其自身的错误。</strong></p> <h2 id="六、修改全局样式"><a href="#六、修改全局样式" class="header-anchor">#</a> 六、修改全局样式</h2> <h3 id="修改全局主题色"><a href="#修改全局主题色" class="header-anchor">#</a> 修改全局主题色</h3> <p>Ant Design Pro默认的界面UI是以<code>#1890ff</code>蓝色为主题色，并且侧边栏默认为<code>dark</code>背景色，但是在项目正式上线前，我们希望能对界面UI进行修改，以此提高用户体验。比如，我希望将界面UI调整为主题色为绿色，而侧边栏为<code>light</code>背景色。由此，我们可以在<code>config/config.js</code>和<code>config/defaultSettings.js</code>中进行修改</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// config/config.js</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+ theme<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token comment">// ...darkTheme,</span>
+    <span class="token string">'@primary-color'</span><span class="token operator">:</span> <span class="token string">'#30C27C'</span><span class="token punctuation">,</span> <span class="token comment">// 全局主色</span>
+    <span class="token string">'@link-color'</span><span class="token operator">:</span> <span class="token string">'#30C27C'</span><span class="token punctuation">,</span> <span class="token comment">// 链接色</span>
+    <span class="token string">'@info-color'</span><span class="token operator">:</span> <span class="token string">'#30C27C'</span><span class="token punctuation">,</span> <span class="token comment">// 提示色</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+</code></pre></div><div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// config/defaultSettings.js</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  navTheme<span class="token operator">:</span> <span class="token string">'light'</span><span class="token punctuation">,</span>  <span class="token comment">// 侧边栏主题</span>
+  primaryColor<span class="token operator">:</span> <span class="token string">'daybreak'</span><span class="token punctuation">,</span>
+  layout<span class="token operator">:</span> <span class="token string">'sidemenu'</span><span class="token punctuation">,</span>
+  contentWidth<span class="token operator">:</span> <span class="token string">'Fluid'</span><span class="token punctuation">,</span>
+  fixedHeader<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+  autoHideHeader<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+  fixSiderbar<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>  <span class="token comment">// 是否固定侧边栏</span>
+  colorWeak<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+  menu<span class="token operator">:</span> <span class="token punctuation">{</span>
+    locale<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  title<span class="token operator">:</span> <span class="token string">'测试项目'</span><span class="token punctuation">,</span>  <span class="token comment">// 网页标题名</span>
+  pwa<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+  iconfontUrl<span class="token operator">:</span> <span class="token string">''</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><p>修改后，需要重新运行项目，之后我们就可以看到界面UI已发生变化</p> <h3 id="修改全局样式"><a href="#修改全局样式" class="header-anchor">#</a> 修改全局样式</h3> <p>上述讲到我们可以在<code>config.js</code>文件中配置主题色，但如果你在项目中有用到<code>DatePicker</code>组件，你会发现页脚部分的tag的颜色并没有发生改变，还是以蓝色为背景色，这就会出现如下图那样的小问题
+<img src="https://user-gold-cdn.xitu.io/2020/3/10/170c4ec67866a6f5?w=317&amp;h=345&amp;f=png&amp;s=16417" alt="">
+这时我们可以<code>F12</code>看下<code>Elements</code>面板，会发现这个tag的类名是<code>ant-tag ant-tag-blue</code>。所以要解决这个问题，我们有两种办法：1. 将tag的类名改为<code>ant-tag ant-tag-green</code> 2. 全局修改这个日期选择器页脚的tag样式</p> <p>由于不知道第一种方案该怎样实现，于是此次采用修改全局样式<br>
+这边还要解释下为什么是修改全局样式，而不是直接给<code>DatePicker</code>加自定义类名，并在less文件中修改。显而易见，我们在DatePicker上添加的类名，控制的样式只是对外层<code>div</code>有用，实际上控制tag样式的是如下标签
+<img src="https://user-gold-cdn.xitu.io/2020/3/10/170c4f7a706fcc15?w=515&amp;h=53&amp;f=png&amp;s=8926" alt="">
+所以需要修改的是全局样式</p> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">:global</span> <span class="token punctuation">{</span>
+  <span class="token selector">.ant-calendar-footer-extra</span> <span class="token punctuation">{</span>
+    <span class="token selector">// 修改日期选择器页脚tag样式
+    .ant-tag</span> <span class="token punctuation">{</span>
+      <span class="token property">color</span><span class="token punctuation">:</span> <span class="token function">rgb</span><span class="token punctuation">(</span>82<span class="token punctuation">,</span> 196<span class="token punctuation">,</span> 26<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token property">background</span><span class="token punctuation">:</span> <span class="token function">rgb</span><span class="token punctuation">(</span>246<span class="token punctuation">,</span> 255<span class="token punctuation">,</span> 237<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token property">border-color</span><span class="token punctuation">:</span> <span class="token function">rgb</span><span class="token punctuation">(</span>183<span class="token punctuation">,</span> 235<span class="token punctuation">,</span> 143<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>修改效果如下：
+<img src="https://user-gold-cdn.xitu.io/2020/3/10/170c4fc7a2ac4456?w=564&amp;h=342&amp;f=png&amp;s=23780" alt=""></p> <h3 id="修改某些地方的全局样式"><a href="#修改某些地方的全局样式" class="header-anchor">#</a> 修改某些地方的全局样式</h3> <p>如果像上述那样修改全局样式的做法，我们可以看到项目中所有运用到修改过的那个组件的地方，样式都会发生变化。但有时，我们只需要在某个页面改变这个组件的样式。以<code>Select</code>组件为例，我希望它在这个页面中，背景色为透明，并且边框没有圆角</p> <ul><li>首先尝试给<code>Select</code>组件加个<code>filter-item</code>类名，然后再使用<code>:global</code>修改</li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token operator">&lt;</span>Select
+   className<span class="token operator">=</span><span class="token punctuation">{</span>styles<span class="token punctuation">[</span><span class="token string">'filter-item-bg'</span><span class="token punctuation">]</span><span class="token punctuation">}</span>
+   <span class="token operator">...</span>
+<span class="token operator">&gt;</span>
+<span class="token operator">...</span>
+</code></pre></div><div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">:global</span> <span class="token punctuation">{</span>
+  <span class="token selector">.filter-item-bg</span> <span class="token punctuation">{</span>
+    <span class="token selector">.ant-select-selection</span><span class="token punctuation">{</span>
+        <span class="token property">background-color</span><span class="token punctuation">:</span> transparent<span class="token punctuation">;</span>
+        <span class="token property">border-radius</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>可是修改后，会发现并没有任何变化。这是因为Ant Design Pro默认使用<code>CSS Module</code>，所以当我们使用<code>styles['filter-item-bg']</code>给组件引入样式时，<code>CSS Module</code>的构建工具将会把类名编译成一个哈希字符串，于是产生了一个独一无二的<code>className</code>，避免与其他选择器重名，我们可以在<code>Elements</code>面板中看到，实际确实如此。但是为什么放在<code>:global</code>中，我们写的样式没有生效？</p> <blockquote><p>CSS Modules 允许使用:global(.className)的语法，声明一个全局规则。凡是这样声明的class，都不会被编译成哈希字符串 --摘自(<a href="http://www.ruanyifeng.com/blog/2016/06/css_modules.html" target="_blank" rel="noopener noreferrer">CSS Modules 用法教程<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>)</p></blockquote> <p>也就是说，这个组件的类名已经被编译成一个哈希字符串，然而在<code>less</code>文件中我们在<code>:global(.className)</code>声明的class却没有被编译，于是，实际上这两个类名是不相同的，样式也就不起作用。<br>
+继续往下看阮老师的博客，我们可以看到解决方案就是使用普通的<code>class</code>写法，它将引用全局<code>class</code></p> <p><img src="https://user-gold-cdn.xitu.io/2020/3/10/170c516215097e6c?w=454&amp;h=589&amp;f=png&amp;s=32922" alt="">
+依照提示修改为：</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token operator">&lt;</span>Select
+   className<span class="token operator">=</span><span class="token string">&quot;filter-item-bg&quot;</span>
+   <span class="token operator">...</span>
+<span class="token operator">&gt;</span>
+</code></pre></div><p>接着我们会发现样式已经成功修改！</p> <h2 id="七、集成sentry"><a href="#七、集成sentry" class="header-anchor">#</a> 七、集成sentry</h2> <div class="language-javascripr extra-class"><pre class="language-text"><code>yarn add @sentry/browser
+</code></pre></div><ul><li>在<code>src/index.js</code>（入口文件）处初始化sentry<br>
+由于本项目下无index.js文件，所以笔者改成在<code>global.jsx</code>中初始化<div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">import</span> <span class="token operator">*</span> <span class="token keyword">as</span> Sentry <span class="token keyword">from</span> <span class="token string">'@sentry/browser'</span><span class="token punctuation">;</span>
+Sentry<span class="token punctuation">.</span><span class="token function">init</span><span class="token punctuation">(</span><span class="token punctuation">{</span> dsn<span class="token operator">:</span> <span class="token string">'https://xxxx'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// 项目的dsn</span>
+</code></pre></div></li> <li>在组件中使用sentry监听异常。笔者这里选择在<code>BasicLayout.jsx</code>中<div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">/*
+    最常见的就是在componentDidCatch钩子函数中捕获异常，
+    因为一旦在整个组件（包括子组件）中发生异常，componentDidCatch就会被调用，同时我们能获取对应的error信息
+    配合 static getDerivedStateFromError() 使用，当发生异常，选择渲染备用UI组件
+*/</span>
+<span class="token function">componentDidCatch</span><span class="token punctuation">(</span><span class="token parameter">error<span class="token punctuation">,</span> errorInfo</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    Sentry<span class="token punctuation">.</span><span class="token function">withScope</span><span class="token punctuation">(</span><span class="token parameter">scope</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      scope<span class="token punctuation">.</span><span class="token function">setExtras</span><span class="token punctuation">(</span>errorInfo<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      Sentry<span class="token punctuation">.</span><span class="token function">captureException</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+</code></pre></div></li> <li>如果我们存在多个不同的sentry dsn：
+<ul><li>本地环境使用测试地址，生产环境使用正式地址：可以在初始化sentry时，利用<code>process.env.NODE_ENV</code>判断是<code>development</code>还是<code>production</code></li> <li>若需要根据不同环境手动指定sentry地址，可以在<code>config</code>目录下新建<code>sentryConfig.js</code>记录<div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  <span class="token constant">MODE_TEST</span><span class="token operator">:</span> <span class="token string">'test'</span><span class="token punctuation">,</span> <span class="token comment">// 测试环境</span>
+  <span class="token constant">MODE_RELEASE</span><span class="token operator">:</span> <span class="token string">'release'</span><span class="token punctuation">,</span> <span class="token comment">// 正式环境</span>
+  <span class="token constant">TEST_DSN</span><span class="token operator">:</span> <span class="token string">'https://dsn1'</span><span class="token punctuation">,</span> <span class="token comment">// 测试环境</span>
+  <span class="token constant">RELEASE_DSN</span><span class="token operator">:</span> <span class="token string">'https://dsn2'</span><span class="token punctuation">,</span> <span class="token comment">// 正式环境</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div>接着可以在组件中引入<code>TEST_DSN</code>或<code>RELEASE_DSN</code>变量启动sentry<br>
+或者你也可以利用<code>config.js</code>中的<code>define</code>去定义一个全局变量，用来判断<div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// config/config.js</span>
+<span class="token keyword">import</span> sentryConfig <span class="token keyword">from</span> <span class="token string">'./sentryConfig'</span><span class="token punctuation">;</span>
+
+define<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token constant">SENTRY_MODE</span><span class="token operator">:</span> sentryConfig<span class="token punctuation">.</span><span class="token constant">MODE_TEST</span><span class="token punctuation">,</span> <span class="token comment">// 修改 sentry的dsn  </span>
+    <span class="token comment">// MODE_TEST - 测试环境    MODE_RELEASE - 正式环境</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+</code></pre></div>接着在<code>src</code>目录下的<code>js</code>文件中，我们可以直接使用<code>SENTRY_MODE</code>这个变量<div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">import</span> sentryConfig <span class="token keyword">from</span> <span class="token string">'../config/sentryConfig'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token constant">SENTRY_MODE</span> <span class="token operator">===</span> sentryConfig<span class="token punctuation">.</span><span class="token constant">MODE_TEST</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      Sentry<span class="token punctuation">.</span><span class="token function">init</span><span class="token punctuation">(</span><span class="token punctuation">{</span> dsn<span class="token operator">:</span> sentryConfig<span class="token punctuation">.</span><span class="token constant">TEST_DSN</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token constant">SENTRY_MODE</span> <span class="token operator">===</span> sentryConfig<span class="token punctuation">.</span><span class="token constant">MODE_RELEASE</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      Sentry<span class="token punctuation">.</span><span class="token function">init</span><span class="token punctuation">(</span><span class="token punctuation">{</span> dsn<span class="token operator">:</span> sentryConfig<span class="token punctuation">.</span><span class="token constant">RELEASE_DSN</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div></li></ul></li></ul> <h2 id="八、集成富文本编辑器"><a href="#八、集成富文本编辑器" class="header-anchor">#</a> 八、集成富文本编辑器</h2> <p>针对用antd pro框架搭建的React项目，笔者选用<strong>Tinymce</strong>这款富文本编辑器</p> <ul><li><code>yarn add @tinymce/tinymce-react@3.6.0</code></li> <li><code>yarn add tinymce@5.2.2</code></li> <li><code>node_modules\tinymce\skins</code>文件夹包含了tinymce编辑器需要用到的静态样式文件和字体，拷贝<code>skins</code>文件夹到<code>public</code>目录下，以便本地能访问</li> <li>封装自定义的<code>MyTinyMce</code>组件<div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span> PureComponent <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> Editor <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@tinymce/tinymce-react'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> tinymce <span class="token keyword">from</span> <span class="token string">'tinymce/tinymce'</span><span class="token punctuation">;</span> <span class="token comment">// eslint-disable-line</span>
+<span class="token keyword">import</span> <span class="token string">'tinymce/themes/silver'</span><span class="token punctuation">;</span> <span class="token comment">// 配置 tinymce 主题</span>
+<span class="token comment">// 按需引入tinymce的插件</span>
+<span class="token keyword">import</span> <span class="token string">'tinymce/plugins/paste'</span><span class="token punctuation">;</span> <span class="token comment">// 针对ctrl + c/v 触发文本更新事件</span>
+<span class="token keyword">import</span> <span class="token string">'tinymce/plugins/preview'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token string">'tinymce/plugins/table'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token string">'tinymce/plugins/image'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token string">'tinymce/plugins/link'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token string">'tinymce/plugins/print'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token string">'tinymce/plugins/autolink'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token string">'tinymce/plugins/fullscreen'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token string">'tinymce/plugins/autosave'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token string">'tinymce/plugins/autoresize'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token string">'tinymce/plugins/hr'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token string">'tinymce/plugins/code'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token string">'tinymce/plugins/lists'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token string">'tinymce/plugins/media'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token string">'tinymce/plugins/anchor'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token string">'tinymce/plugins/advlist'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">class</span> <span class="token class-name">MyTinyMce</span> <span class="token keyword">extends</span> <span class="token class-name">PureComponent</span> <span class="token punctuation">{</span>
+  <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 需要向封装的Tinymce组件传递 onChange 和 value 属性</span>
+    <span class="token keyword">const</span> <span class="token punctuation">{</span> onChange<span class="token punctuation">,</span> value <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">;</span>
+    
+    <span class="token comment">// 页面上编辑器上方的功能菜单栏会依据给 Editor 组件传入的 toolbal 属性来排列</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+      <span class="token operator">&lt;</span>Editor
+        value<span class="token operator">=</span><span class="token punctuation">{</span>value<span class="token punctuation">}</span>
+        onEditorChange<span class="token operator">=</span><span class="token punctuation">{</span><span class="token parameter">content</span> <span class="token operator">=&gt;</span> <span class="token function">onChange</span><span class="token punctuation">(</span>content<span class="token punctuation">)</span><span class="token punctuation">}</span>
+        init<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span>
+          height<span class="token operator">:</span> <span class="token number">300</span><span class="token punctuation">,</span>
+          menubar<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+          plugins<span class="token operator">:</span> <span class="token punctuation">[</span>
+            <span class="token string">'advlist autolink lists link image print preview anchor'</span><span class="token punctuation">,</span>
+            <span class="token string">'code fullscreen'</span><span class="token punctuation">,</span>
+            <span class="token string">'media table paste code'</span><span class="token punctuation">,</span>
+          <span class="token punctuation">]</span><span class="token punctuation">,</span>
+          toolbar<span class="token operator">:</span>
+            <span class="token string">'formatselect forecolor backcolor bold italic underline strikethrough image media table alignleft aligncenter alignright alignjustify bullist numlist outdent indent removeformat hr paste code link undo redo preview fullscreen'</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">}</span>
+      <span class="token operator">/</span><span class="token operator">&gt;</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> MyTinyMce<span class="token punctuation">;</span>
+</code></pre></div></li></ul> <h3 id="自定义的mytinymce组件与受控组件"><a href="#自定义的mytinymce组件与受控组件" class="header-anchor">#</a> 自定义的MyTinymce组件与受控组件</h3> <p>上述封装代码中，通过给自定义的MyTinymce组件传递<code>onChange</code>和<code>value</code>属性来使其成为一个受控组件，控制编辑器文本的显示和更新。基于此，我们可以结合<code>antd</code>中<code>Form</code>组件的<code>this.props.form.getFieldDecorator</code>来包装自定义的MyTinymce组件</p> <div class="language-javacript extra-class"><pre class="language-text"><code>&lt;Form.Item label=&quot;商品描述&quot;&gt;
+    {getFieldDecorator('bodyHtml', {
+        initialValue: initBodyHtml || '&lt;p&gt;&lt;/p&gt;',
+    })(&lt;TinyMce /&gt;)}
+&lt;/Form.Item&gt;
+</code></pre></div><p><img src="https://user-gold-cdn.xitu.io/2020/7/5/1731ebc8875f717e?w=830&amp;h=215&amp;f=png&amp;s=41499" alt="antd">
+图片源于<code>Ant Design</code>官网</p> <h2 id="九、监听路由变化"><a href="#九、监听路由变化" class="header-anchor">#</a> 九、监听路由变化</h2> <p>需求场景：当我们需要在项目中实现一方用户能创建消息发送给某用户，某用户能实时接收到全部消息的功能，并且基于项目结构我们不想利用<code>socket.io</code>来改写功能，此时就可以考虑换个思路去实现。<br>
+我们可以考虑当路由改变或页面刷新时，就发送请求获取用户当前未读消息，虽然这种实现思路略有瑕疵，但确实是一种可行方案。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// src\layouts\BasicLayout.jsx</span>
+<span class="token function">componentDidMount</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> <span class="token punctuation">{</span>  history <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">;</span>
+
+    <span class="token comment">// 通过 history.listen 监听路由变化，在此方法内可以发送请求</span>
+    history<span class="token punctuation">.</span><span class="token function">listen</span><span class="token punctuation">(</span><span class="token parameter">route</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>route<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="十、通过临时token访问项目"><a href="#十、通过临时token访问项目" class="header-anchor">#</a> 十、通过临时token访问项目</h2> <p>对于使用<code>OAuth</code>或<code>JWT</code>授权方案获取<code>access_token</code>来判断用户是否有访问权限的系统，若正面临的一个需求是：通过后端生成的临时token，让外部用户在访问本项目的页面url中携带一个<code>token</code>参数，前端拦截这个参数并请求后端接口来解析这个临时token，从而能获取真正的<code>access_token</code>，前端依此获取用户信息，从而实现外部用户在无需登录的情况下也能访问本项目特定页面<br>
+这个需求实现的关键点在于应该在哪块代码中或在哪个代码文件中实现这个功能。首先想到的是在<code>BasicLayout.jsx</code>中通过<code>componentDidMount</code>钩子函数中对当前访问的url进行判断，若携带<code>token</code>参数，则发起请求解析临时token。但明显是行不通的，对于无访问权限的用户，在进入主页面前就会通过路由权限判断为无访问权限，重定向回登录页面<br>
+最后选择在<code>src\components\Authorized\CheckPermissions.jsx</code>模块下实现功能。当用户访问项目主页面时，都会通过<code>CheckPermissions.jsx</code>里的代码逻辑进行权限检查，未通过则重定向回登录页</p> <div class="language-jsx extra-class"><pre class="language-jsx"><code><span class="token keyword">const</span> <span class="token function-variable function">checkPermissions</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">authority<span class="token punctuation">,</span> currentAuthority<span class="token punctuation">,</span> target<span class="token punctuation">,</span> Exception</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> <span class="token punctuation">{</span> props <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span> <span class="token punctuation">}</span> <span class="token operator">=</span> target <span class="token operator">||</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token keyword">const</span> <span class="token punctuation">{</span> pathname<span class="token punctuation">,</span> query <span class="token punctuation">}</span> <span class="token operator">=</span> props<span class="token punctuation">.</span>location <span class="token operator">||</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>query <span class="token operator">&amp;&amp;</span> query<span class="token punctuation">.</span>token<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+   <span class="token comment">// 若页面url携带token参数，则发起请求解析token</span>
+    <span class="token function">parseToken</span><span class="token punctuation">(</span>query<span class="token punctuation">.</span>token<span class="token punctuation">)</span>
+      <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">res</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>res <span class="token operator">&amp;&amp;</span> res<span class="token punctuation">.</span>token<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token comment">// 若解析成功则保存返回的access_token</span>
+          <span class="token function">setAuthorityByToken</span><span class="token punctuation">(</span>token<span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token comment">// 通过access_token，发送请求获取用户信息</span>
+          <span class="token keyword">return</span> <span class="token function">fetchCurUser</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span>
+      <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">user</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>user <span class="token operator">&amp;&amp;</span> user<span class="token punctuation">.</span>id<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+         <span class="token comment">// 如果获取用户信息成功，则代表身份认证成功，设置前往用户原访问页面</span>
+          <span class="token function">setUser</span><span class="token punctuation">(</span>user<span class="token punctuation">)</span><span class="token punctuation">;</span>
+          window<span class="token punctuation">.</span>location<span class="token punctuation">.</span>href <span class="token operator">=</span> pathname<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">const</span> expires <span class="token operator">=</span> localStorage<span class="token punctuation">.</span><span class="token function">getItem</span><span class="token punctuation">(</span><span class="token string">'api-token-expires'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">moment</span><span class="token punctuation">(</span>expires<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">isBefore</span><span class="token punctuation">(</span><span class="token function">moment</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    notification<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      message<span class="token operator">:</span> <span class="token string">'权限失效，请重新登录'</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">setUser</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">setAuthorityByToken</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Redirect</span></span> <span class="token attr-name">to</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>/user/login<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token operator">...</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><h2 id="十一、自定义菜单栏渲染"><a href="#十一、自定义菜单栏渲染" class="header-anchor">#</a> 十一、自定义菜单栏渲染</h2> <p>ant design pro默认渲染的菜单栏样式如下
+<img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6aaae93ce3c54cf4bcfdf0a467c4376b~tplv-k3u1fbpfcp-zoom-1.image" alt="">
+若想自定义菜单栏的样式，如利用Badge组件提示未读消息数量或用多个图标装饰，可以在<code>BasicLayout.jsx</code>里进行修改</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token operator">&lt;</span>ProLayout
+	<span class="token operator">...</span>
+	menuItemRender<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token parameter">menuItemProps<span class="token punctuation">,</span> defaultDom</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+		<span class="token keyword">if</span> <span class="token punctuation">(</span>menuItemProps<span class="token punctuation">.</span>isUrl <span class="token operator">||</span> menuItemProps<span class="token punctuation">.</span>children <span class="token operator">||</span> <span class="token operator">!</span>menuItemProps<span class="token punctuation">.</span>path<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			<span class="token keyword">return</span> defaultDom<span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+		<span class="token comment">// 示例，可以根据当前渲染菜单项的path来判断，并自定义渲染</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>menuItemProps<span class="token punctuation">.</span>path <span class="token operator">===</span> <span class="token string">'dashboard'</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token operator">&lt;</span>Link to<span class="token operator">=</span><span class="token string">'/dashboard'</span><span class="token operator">&gt;</span>Dashboard<span class="token operator">&lt;</span><span class="token operator">/</span>Link<span class="token operator">&gt;</span>
+		<span class="token keyword">return</span> <span class="token operator">&lt;</span>Link to<span class="token operator">=</span><span class="token punctuation">{</span>menuItemProps<span class="token punctuation">.</span>path<span class="token punctuation">}</span><span class="token operator">&gt;</span><span class="token punctuation">{</span>defaultDom<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>Link<span class="token operator">&gt;</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span><span class="token punctuation">}</span>
+	<span class="token operator">...</span>
+</code></pre></div><h2 id="十二、用户权限"><a href="#十二、用户权限" class="header-anchor">#</a> 十二、用户权限</h2> <p>对于中大型后台管理系统来说，需要更细化的用户鉴权方式。通常会选择在获取用户信息时，将该用户所拥有的权限数据一并返回，从而用来判断页面上某些显示和操作功能是否向用户开放。<br>
+如果单纯将这些用户信息利用状态管理器dva来存取，可当用户刷新页面时，状态管理器中的数据会丢失，这时会利用存储在浏览器本地的<code>access_token</code>重新发起请求获取用户信息，但同时页面仍在重新渲染，甚至在请求完成前就已渲染完毕，这时会出现用户权限数据丢失，导致页面渲染不完整的情况。<br>
+解决上述问题最佳的办法之一是利用存储在浏览器本地如<code>localStorage</code>里的用户信息进行鉴权</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// BasicLayout.jsx</span>
+<span class="token operator">...</span>
+<span class="token keyword">async</span> <span class="token function">componentDidMount</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> <span class="token punctuation">{</span> dispatch <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">;</span>
+    <span class="token keyword">const</span> currentUser <span class="token operator">=</span> <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span>window<span class="token punctuation">.</span>localStorage<span class="token punctuation">.</span><span class="token function">getItem</span><span class="token punctuation">(</span><span class="token string">'current-user'</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">||</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>dispatch<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+     <span class="token comment">// 同步获取本地存储的用户信息</span>
+      <span class="token function">dispatch</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+        type<span class="token operator">:</span> <span class="token string">'user/saveCurrentUser'</span><span class="token punctuation">,</span>
+        payload<span class="token operator">:</span> currentUser<span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token comment">// 异步获取用户信息</span>
+      <span class="token function">dispatch</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+        type<span class="token operator">:</span> <span class="token string">'user/fetchCurrent'</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token operator">...</span>
+</code></pre></div><p>在<code>BasicLayout.jsx</code>文件中做了上述修改。利用两次<code>dispatch</code>，先同步本地存储的用户信息到项目状态管理器中，等到请求完成后，再更新为最新的用户信息。这么做考虑点有下：一是如刷新页面或者在<code>access_token</code>未过期前重新访问项目，正常情况下本地保存的用户信息是完整的，可以用此初始化项目数据，若丢失则会跳转到登录页，且登录的流程中恰恰是等到获取了完整的用户信息后才能访问项目主页面，所以基本上不会出现问题。</p> <h2 id="十三、dva-loading"><a href="#十三、dva-loading" class="header-anchor">#</a> 十三、dva-loading</h2> <p>antd pro中利用<code>dva-loading</code>插件封装了<code>loading</code>状态，发起异步请求时为<code>true</code>，请求结束为<code>false</code>，在实际开发中可以利用loading值给出更好的用户提示</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// dva中存在loading模块</span>
+<span class="token function">connect</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> app<span class="token punctuation">,</span> loading <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span><span class="token punctuation">{</span> 
+    app<span class="token punctuation">,</span> 
+    loading<span class="token punctuation">,</span>
+    loading1<span class="token operator">:</span> loading<span class="token punctuation">.</span>models<span class="token punctuation">.</span>app<span class="token punctuation">,</span> <span class="token comment">// 监听app模块下的所有异步请求，在所有异步请求完成前,loading1值为true，完成后为false</span>
+    loading2<span class="token operator">:</span> loading<span class="token punctuation">.</span>effects<span class="token punctuation">[</span><span class="token string">'app/getData'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token comment">//监听app下的getData异步请求</span>
+    loading3<span class="token operator">:</span> loading<span class="token punctuation">.</span><span class="token function">global</span><span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment">// 监听全局所有的异步请求</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">(</span>App<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>按上面的介绍，我们可以拿到对应的<code>loading</code>值，为<code>true</code>，表示正在请求数据，给用户“正在加载中...”的提示。但是这个条件判断有一点不足，具体看下述场景<br>
+开发中，我们一般会在<code>componentDidMount</code>中发起异步请求获取数据，并可能会利用到类似<code>&lt;Spin spinning={loading} /&gt;</code>给予用户加载中的提示，但是要注意的是，初始化应用时，<code>loading</code>值实际上为<code>undefined</code> ，并且在非常短的时间间隔后，在异步请求发起时，才会变为<code>true</code>，如果按上述方式使用<code>loading</code>，会发现页面一开始没有正在加载数据的提示，之后才会出现，这点实际上可以被优化，只需要给<code>loading</code>赋上初始值，值为<code>undefined</code>时设置为默认值<code>true</code>，之后<code>loading</code>值会根据异步请求完成情况，自动变更为<code>true</code>或<code>false</code></p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">class</span> <span class="token class-name">App</span> <span class="token keyword">extends</span> <span class="token class-name">Component</span> <span class="token punctuation">{</span>
+   <span class="token function">componentDidMount</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+     <span class="token keyword">const</span> <span class="token punctuation">{</span> dispatch <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>props
+     <span class="token function">dispatch</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+       type<span class="token operator">:</span> <span class="token string">'app/getData'</span>
+     <span class="token punctuation">}</span><span class="token punctuation">)</span>
+   <span class="token punctuation">}</span>
+   
+   <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+      <span class="token keyword">const</span> <span class="token punctuation">{</span> loading <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>props
+      <span class="token keyword">return</span> <span class="token punctuation">(</span>
+        <span class="token operator">&lt;</span>Spin tip<span class="token operator">=</span><span class="token string">&quot;Loading...&quot;</span> spinning<span class="token operator">=</span><span class="token punctuation">{</span>loading<span class="token punctuation">}</span><span class="token operator">&gt;</span>
+           <span class="token operator">&lt;</span>div<span class="token operator">&gt;</span>hello world<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span><span class="token operator">/</span>Spin<span class="token operator">&gt;</span>
+      <span class="token punctuation">)</span>
+   <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token function">connect</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> app<span class="token punctuation">,</span> loading <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span><span class="token punctuation">{</span> 
+    app<span class="token punctuation">,</span> 
+    <span class="token comment">// 默认值true</span>
+    loading<span class="token operator">:</span> loading<span class="token punctuation">.</span>effects<span class="token punctuation">[</span><span class="token string">'app/getData'</span><span class="token punctuation">]</span> <span class="token operator">??</span> <span class="token boolean">true</span><span class="token punctuation">,</span> 
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">(</span>App<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h2 id="十四、条件渲染"><a href="#十四、条件渲染" class="header-anchor">#</a> 十四、条件渲染</h2> <p>开发中常用到条件渲染<br>
+一般写法</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code>isExist <span class="token operator">?</span> <span class="token operator">&lt;</span>div<span class="token operator">&gt;</span>hello world<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span> <span class="token operator">:</span> <span class="token keyword">null</span>
+</code></pre></div><p>简化后</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code>isExist <span class="token operator">&amp;&amp;</span> <span class="token operator">&lt;</span>div<span class="token operator">&gt;</span>hello world<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+</code></pre></div><p>上述写法有一定缺陷，当前面的条件判断后的值为非布尔类型，比如值为数值0，预期是判为false，并且渲染后面的元素，但实际上渲染出来的是数值0，并且后面的元素不会被渲染</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// 预期当data数组的长度不为0时渲染后面的div</span>
+<span class="token comment">// 实际上当data数组长度为0时渲染出来的是 数值0 而非 div</span>
+data<span class="token punctuation">.</span>length <span class="token operator">&amp;&amp;</span> <span class="token operator">&lt;</span>div<span class="token operator">&gt;</span>hello world<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+</code></pre></div><p>应该改写为</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code>data<span class="token punctuation">.</span>length <span class="token operator">&gt;</span> <span class="token number">0</span> <span class="token operator">&amp;&amp;</span> <span class="token operator">&lt;</span>div<span class="token operator">&gt;</span>hello world<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><!----> <span class="next"><a href="/frontend/antdpro-authority-management.html">
+        antd pro 权限管理
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.2619889f.js" defer></script><script src="/assets/js/2.96a76ef5.js" defer></script><script src="/assets/js/14.7d6fc175.js" defer></script>
+  </body>
+</html>

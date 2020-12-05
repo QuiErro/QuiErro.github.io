@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>使用laradock搭建laravel项目 | QuiErro&#39;s blog</title>
+    <meta name="description" content="">
+    <meta name="generator" content="VuePress 1.3.0">
+    
+    
+    <link rel="preload" href="/assets/css/0.styles.93dcc6b2.css" as="style"><link rel="preload" href="/assets/js/app.2619889f.js" as="script"><link rel="preload" href="/assets/js/2.96a76ef5.js" as="script"><link rel="preload" href="/assets/js/18.8a0fa7a6.js" as="script"><link rel="prefetch" href="/assets/js/10.5bda610d.js"><link rel="prefetch" href="/assets/js/11.aaafe754.js"><link rel="prefetch" href="/assets/js/12.c8c4a9dc.js"><link rel="prefetch" href="/assets/js/13.bb83ed70.js"><link rel="prefetch" href="/assets/js/14.7d6fc175.js"><link rel="prefetch" href="/assets/js/15.8ff5a488.js"><link rel="prefetch" href="/assets/js/16.f4417e8a.js"><link rel="prefetch" href="/assets/js/17.23a97fb3.js"><link rel="prefetch" href="/assets/js/19.1ae67b9a.js"><link rel="prefetch" href="/assets/js/3.def7da81.js"><link rel="prefetch" href="/assets/js/4.ad57049c.js"><link rel="prefetch" href="/assets/js/5.50374dc2.js"><link rel="prefetch" href="/assets/js/6.be928897.js"><link rel="prefetch" href="/assets/js/7.eb8c7482.js"><link rel="prefetch" href="/assets/js/8.a0ec3913.js"><link rel="prefetch" href="/assets/js/9.ffa921f0.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.93dcc6b2.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">QuiErro's blog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/frontend/summary-antdpro.html" class="nav-link">
+  Frontend
+</a></div><div class="nav-item"><a href="/frontend/frontend-algorithm.html" class="nav-link">
+  前端算法
+</a></div><div class="nav-item"><a href="/laravel/laradock.html" class="nav-link router-link-exact-active router-link-active">
+  Laravel
+</a></div> <a href="https://github.com/QuiErro/QuiErro.github.io" target="_blank" rel="noopener noreferrer" class="repo-link">
+    My GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/frontend/summary-antdpro.html" class="nav-link">
+  Frontend
+</a></div><div class="nav-item"><a href="/frontend/frontend-algorithm.html" class="nav-link">
+  前端算法
+</a></div><div class="nav-item"><a href="/laravel/laradock.html" class="nav-link router-link-exact-active router-link-active">
+  Laravel
+</a></div> <a href="https://github.com/QuiErro/QuiErro.github.io" target="_blank" rel="noopener noreferrer" class="repo-link">
+    My GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Laravel</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/laravel/laradock.html" class="active sidebar-link">使用laradock搭建laravel项目</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/laravel/laradock.html#准备" class="sidebar-link">准备</a></li><li class="sidebar-sub-header"><a href="/laravel/laradock.html#安装和配置laradock" class="sidebar-link">安装和配置laradock</a></li><li class="sidebar-sub-header"><a href="/laravel/laradock.html#创建laravel项目" class="sidebar-link">创建laravel项目</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="使用laradock搭建laravel项目"><a href="#使用laradock搭建laravel项目" class="header-anchor">#</a> 使用laradock搭建laravel项目</h1> <h2 id="准备"><a href="#准备" class="header-anchor">#</a> 准备</h2> <ul><li>Git</li> <li>Docker <code>&gt;= 1.12</code></li></ul> <h2 id="安装和配置laradock"><a href="#安装和配置laradock" class="header-anchor">#</a> 安装和配置laradock</h2> <ul><li>启动docker，新建项目目录</li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code>$ mkdir laravel <span class="token operator">&amp;&amp;</span> cd laravel
+</code></pre></div><ul><li>安装laradock</li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code>$ git clone https<span class="token operator">:</span><span class="token operator">/</span><span class="token operator">/</span>github<span class="token punctuation">.</span>com<span class="token operator">/</span>Laradock<span class="token operator">/</span>laradock<span class="token punctuation">.</span>git
+</code></pre></div><ul><li>进入laradock目录，并将env-example重命名为.env</li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code>$ cd laradock
+$ cp env<span class="token operator">-</span>example <span class="token punctuation">.</span>env
+</code></pre></div><ul><li>修改<code>.env</code>默认配置</li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code># 本地存放项目代码的目录，默认和laradock同级目录
+<span class="token constant">APP_CODE_PATH_HOST</span><span class="token operator">=</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token operator">/</span>
+
+# 容器中存放项目的目录，是laradock和项目代码的父级目录
+# 会和本地目录建立软链接
+<span class="token constant">APP_CODE_PATH_CONTAINER</span><span class="token operator">=</span><span class="token operator">/</span><span class="token keyword">var</span><span class="token operator">/</span>www
+
+# 视情况而定，可将mysql版本从最新版改为<span class="token number">5.7</span>
+<span class="token operator">-</span> <span class="token constant">MYSQL_VERSION</span><span class="token operator">=</span>latest
+<span class="token operator">+</span> <span class="token constant">MYSQL_VERSION</span><span class="token operator">=</span><span class="token number">5.7</span>
+
+# 存放数据的目录（若将mysql版本改为<span class="token number">5.7</span>，就要修改，否则报错）
+<span class="token operator">-</span> <span class="token constant">DATA_PATH_HOST</span><span class="token operator">=</span><span class="token operator">~</span><span class="token operator">/</span><span class="token punctuation">.</span>laradock<span class="token operator">/</span>data
+<span class="token operator">+</span> <span class="token constant">DATA_PATH_HOST</span><span class="token operator">=</span><span class="token punctuation">.</span><span class="token operator">/</span>data
+</code></pre></div><ul><li>构建容器</li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code>$ docker<span class="token operator">-</span>compose up <span class="token operator">-</span>d nginx mysql redis
+</code></pre></div><p>有需求其他应用，可以如上述命令构建容器。另外laradock会自动构建<code>php-fpm</code>和<code>workspace</code>这两个容器</p> <h2 id="创建laravel项目"><a href="#创建laravel项目" class="header-anchor">#</a> 创建laravel项目</h2> <ul><li>在<code>laradock</code>同级目录下创建新laravel项目</li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code>$ cd <span class="token punctuation">.</span><span class="token punctuation">.</span>
+$ composer create<span class="token operator">-</span>project <span class="token operator">--</span>prefer<span class="token operator">-</span>dist laravel<span class="token operator">/</span>laravel myproject
+</code></pre></div><p>创建成功后的目录结构：</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token operator">-</span> laravel
+    <span class="token operator">+</span> laradock
+    <span class="token operator">+</span> myproject
+</code></pre></div><ul><li>配置nginx
+进入laradock/nginx/sites目录，复制<code>laravel.conf</code>并作配置</li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code>$ cd laradock<span class="token operator">/</span>nginx<span class="token operator">/</span>sites
+$ cp laravel<span class="token punctuation">.</span>conf<span class="token punctuation">.</span>example laravel<span class="token punctuation">.</span>conf
+</code></pre></div><p>根据需求修改域名和路径</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code>server_name myproject<span class="token punctuation">.</span>test<span class="token punctuation">;</span>
+
+# 要与<span class="token punctuation">.</span>env中的<span class="token constant">APP_CODE_PATH_CONTAINER</span>相同
+root <span class="token operator">/</span><span class="token keyword">var</span><span class="token operator">/</span>www<span class="token operator">/</span>myproject<span class="token operator">/</span><span class="token keyword">public</span><span class="token punctuation">;</span> 
+</code></pre></div><p>修改完后重启nginx</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code>$ docker restart laradock_nginx_1
+</code></pre></div><p>修改本地域名解析文件，<code>windows</code>下进入<code>C:\Windows\System32\drivers\etc</code>目录编辑<code>hosts</code>文件，最下方新增</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token number">127.0</span><span class="token number">.0</span><span class="token number">.1</span> myproject<span class="token punctuation">.</span>test
+</code></pre></div><p>完成域名映射后打开 http://myproject.test 即可访问</p> <ul><li>修改项目配置</li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code>$ cd <span class="token punctuation">.</span><span class="token punctuation">.</span>
+$ cd myproject
+</code></pre></div><p>根据laradock下的<code>.env</code>修改项目目录下的<code>.env</code></p> <ul><li>修改<code>redis</code>配置</li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token constant">REDIS_CLIENT</span><span class="token operator">=</span>predis
+<span class="token constant">REDIS_HOST</span><span class="token operator">=</span>redis      # 必须填redis
+<span class="token constant">REDIS_PASSWORD</span><span class="token operator">=</span><span class="token keyword">null</span>
+<span class="token constant">REDIS_PORT</span><span class="token operator">=</span><span class="token number">6379</span>
+</code></pre></div><ul><li>修改<code>mysql</code>配置</li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token constant">DB_CONNECTION</span><span class="token operator">=</span>mysql
+<span class="token constant">DB_HOST</span><span class="token operator">=</span>mysql        # 必须填mysql
+<span class="token constant">DB_PORT</span><span class="token operator">=</span><span class="token number">3306</span>
+<span class="token constant">DB_DATABASE</span><span class="token operator">=</span><span class="token keyword">default</span>
+<span class="token constant">DB_USERNAME</span><span class="token operator">=</span><span class="token keyword">default</span>
+<span class="token constant">DB_PASSWORD</span><span class="token operator">=</span>secret
+</code></pre></div><p>除了<code>DB_HOST</code>必填<code>mysql</code>，其他可根据laradock下的.env自行调整，但必须保持两个文件配置参数相同<br>
+若修改了laradock下的<code>.env</code>文件：</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code>#停止mysql容器
+$ docker<span class="token operator">-</span>compose stop mysql
+
+# 重启docker，并构建mysql
+$ docker<span class="token operator">-</span>compose build mysql
+
+# 重新创建容器
+$ docker<span class="token operator">-</span>compose up <span class="token operator">-</span>d mysql
+</code></pre></div><p>查看mysql容器内的版本，会发现配置已经发生改变。之后根据配置修改项目目录下的<code>.env</code></p> <p>这里曾遇到过一个问题，在修改完两方<code>.env</code>文件后，即便两个文件关于数据库的配置相同，但是进入到工作区后，在项目目录下执行<code>php artisan migrate</code>会报错</p> <ul><li>进入工作区</li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code>$ docker<span class="token operator">-</span>compose exec <span class="token operator">--</span>user<span class="token operator">=</span>laradock workspace bash
+</code></pre></div><ul><li>进入项目目录并执行 <code>php artisan migrate</code></li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token operator">/</span><span class="token keyword">var</span><span class="token operator">/</span>www# cd myproject
+<span class="token operator">/</span><span class="token keyword">var</span><span class="token operator">/</span>www<span class="token operator">/</span>myproject# php artisan migrate   # 报错
+</code></pre></div><p>解决方法：laravel项目修改配置后先清理缓存，再执行</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token operator">/</span><span class="token keyword">var</span><span class="token operator">/</span>www<span class="token operator">/</span>myproject# php artisan config<span class="token operator">:</span>clear
+</code></pre></div><ul><li>使用数据库管理工具（mysql）
+新建连接，修改连接属性</li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code>主机名或<span class="token constant">IP</span>地址： localhost
+端口：          <span class="token number">3306</span>  
+用户名：	        <span class="token keyword">default</span>
+密码：		secret
+</code></pre></div><p>主机名或IP地址填localhost，3306端口转发，第一次连接时可以成功访问数据库，但二次连接时将会报错<code>1251</code>（待解决）</p></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.2619889f.js" defer></script><script src="/assets/js/2.96a76ef5.js" defer></script><script src="/assets/js/18.8a0fa7a6.js" defer></script>
+  </body>
+</html>
